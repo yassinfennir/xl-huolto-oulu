@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lasku YEF-2026-126 — XL-Huolto Oulu</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#f8f9fb;color:#1a1a2e;line-height:1.6;padding:40px}
+.invoice{max-width:800px;margin:0 auto;background:#fff;border-radius:20px;overflow:hidden;
+  box-shadow:0 20px 60px rgba(0,0,0,.08)}
+.header{background:linear-gradient(135deg,#0a0a14 0%,#141428 100%);color:#fff;padding:48px;
+  display:flex;justify-content:space-between;align-items:flex-start}
+.brand h1{font-size:24px;font-weight:800;letter-spacing:-.02em;margin-bottom:4px}
+.brand p{font-size:13px;color:rgba(255,255,255,.6)}
+.invoice-label{text-align:right}
+.invoice-label h2{font-size:32px;font-weight:800;letter-spacing:-.03em;
+  background:linear-gradient(135deg,#9945ff,#14f195);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.invoice-label .num{font-size:14px;color:rgba(255,255,255,.5);margin-top:4px}
+.meta{padding:40px 48px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;
+  border-bottom:1px solid #f0f0f5}
+.meta-group h4{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:#9945ff;margin-bottom:8px}
+.meta-group p{font-size:14px;color:#4a4a6a}
+.meta-group strong{color:#1a1a2e;font-weight:600}
+.body{padding:40px 48px}
+.table{width:100%;border-collapse:collapse}
+.table th{text-align:left;padding:14px 16px;font-size:11px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:#9945ff;border-bottom:2px solid #f0f0f5}
+.table td{padding:16px;border-bottom:1px solid #f8f8fc;font-size:14px;color:#4a4a6a}
+.table .item-name{font-weight:600;color:#1a1a2e;font-size:15px}
+.table .item-desc{font-size:13px;color:#8888a0;margin-top:4px}
+.features{list-style:none;margin-top:8px}
+.features li{font-size:13px;color:#6a6a8a;padding:3px 0;display:flex;align-items:center;gap:8px}
+.features li::before{content:'✓';color:#14f195;font-weight:700;font-size:14px}
+.totals{margin-top:32px;display:flex;justify-content:flex-end}
+.totals-box{width:280px;border-radius:16px;overflow:hidden}
+.totals-row{display:flex;justify-content:space-between;padding:12px 20px;font-size:14px;color:#6a6a8a}
+.totals-row.total{background:linear-gradient(135deg,#0a0a14,#141428);color:#fff;
+  padding:18px 20px;font-size:18px;font-weight:700;border-radius:12px;margin-top:8px}
+.totals-row.total span:last-child{background:linear-gradient(135deg,#9945ff,#14f195);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;font-size:22px}
+.footer{padding:32px 48px;background:#fafafe;border-top:1px solid #f0f0f5}
+.payment{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.payment h4{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:#9945ff;margin-bottom:12px}
+.payment p{font-size:14px;color:#4a4a6a;line-height:1.8}
+.payment strong{color:#1a1a2e}
+.note{margin-top:32px;padding:24px;background:linear-gradient(135deg,rgba(153,69,255,.04),rgba(20,241,149,.04));
+  border-radius:12px;border:1px solid rgba(153,69,255,.1)}
+.note p{font-size:13px;color:#6a6a8a;line-height:1.8}
+.note strong{color:#9945ff}
+.thanks{text-align:center;padding:40px 48px 48px;background:#fafafe}
+.thanks h3{font-size:20px;font-weight:700;color:#1a1a2e;margin-bottom:8px}
+.thanks p{font-size:14px;color:#8888a0}
+.thanks .contact{margin-top:20px;display:flex;gap:24px;justify-content:center;flex-wrap:wrap}
+.thanks .contact a{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:#9945ff;
+  text-decoration:none;font-weight:500}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:50px;
+  font-size:12px;font-weight:600;letter-spacing:.02em}
+.badge-green{background:rgba(20,241,149,.1);color:#0d9488}
+.badge-purple{background:rgba(153,69,255,.1);color:#9945ff}
+.preview-link{margin-top:24px;padding:20px;background:linear-gradient(135deg,#0a0a14,#141428);
+  border-radius:12px;text-align:center}
+.preview-link a{color:#14f195;font-weight:600;font-size:15px;text-decoration:none}
+.preview-link p{color:rgba(255,255,255,.5);font-size:12px;margin-top:4px}
+@media print{
+  body{padding:0;background:#fff}
+  .invoice{box-shadow:none;border-radius:0}
+}
+</style>
+</head>
+<body>
+<div class="invoice">
+  <div class="header">
+    <div class="brand">
+      <h1>El Fennir Agency</h1>
+      <p>Yassin El Fennir</p>
+      <p>Espoo, Suomi</p>
+    </div>
+    <div class="invoice-label">
+      <h2>LASKU</h2>
+      <div class="num">YEF-2026-126</div>
+    </div>
+  </div>
+
+  <div class="meta">
+    <div class="meta-group">
+      <h4>Laskun tiedot</h4>
+      <p><strong>Laskun numero:</strong> YEF-2026-126</p>
+      <p><strong>Päivämäärä:</strong> 18.3.2026</p>
+      <p><strong>Eräpäivä:</strong> 1.4.2026</p>
+      <p><span class="badge badge-green">14 päivää maksuaikaa</span></p>
+    </div>
+    <div class="meta-group">
+      <h4>Lähettäjä</h4>
+      <p><strong>El Fennir Agency</strong></p>
+      <p>Yassin El Fennir</p>
+      <p>Espoo, Suomi</p>
+      <p>yassinfennir@gmail.com</p>
+      <p>+358 46 6109064</p>
+    </div>
+    <div class="meta-group">
+      <h4>Vastaanottaja</h4>
+      <p><strong>XL-Huolto Oulu</strong></p>
+      <p>Oulu</p>
+      <p>huolto@xlhuolto.fi</p>
+      <p>050 543 3439</p>
+    </div>
+  </div>
+
+  <div class="body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th style="width:55%">Palvelu</th>
+          <th>Määrä</th>
+          <th style="text-align:right">Hinta</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="item-name">Verkkosivusto — Starter-paketti <span class="badge badge-purple">Starter</span></div>
+            <div class="item-desc">Ammattimainen verkkosivusto yrityksellenne XL-Huolto Oulu</div>
+            <ul class="features">
+              <li>1–3 sivun moderni verkkosivusto</li>
+              <li>Mobiilioptimoitu ja responsiivinen</li>
+              <li>Yhteydenottolomake + WhatsApp-nappi</li>
+              <li>Hakukoneoptimointi (SEO)</li>
+              <li>1 vuoden tuki ja ylläpito</li>
+              <li>Toimitus 5–7 päivässä</li>
+            </ul>
+          </td>
+          <td>1</td>
+          <td style="text-align:right;font-weight:700;font-size:16px">399.00 €</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="totals">
+      <div class="totals-box">
+        <div class="totals-row"><span>Valittu paketti:</span><span>Starter</span></div>
+        <div class="totals-row"><span>Välittömässä:</span><span>399.00 €</span></div>
+        <div class="totals-row"><span>ALV (0%):</span><span>0.00 €</span></div>
+        <div class="totals-row total"><span>Yhteensä</span><span>399.00 €</span></div>
+      </div>
+    </div>
+
+    <div class="preview-link">
+      <p>Verkkosivustonne esikatselu:</p>
+      <a href="https://yassinfennir.github.io/xl-huolto-oulu/" target="_blank">https://yassinfennir.github.io/xl-huolto-oulu/</a>
+      <p>Katsokaa rauhassa — tehty juuri teille!</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="payment">
+      <div>
+        <h4>Maksutiedot</h4>
+        <p>
+          <strong>Saaja:</strong> Yassin El Fennir<br>
+          <strong>IBAN:</strong> FI21 2082 1800 0587 53<br>
+          <strong>BIC:</strong> NDEASESS<br>
+          <strong>Viite:</strong> YEF-2026-126<br>
+          <strong>Summa:</strong> 399.00 €
+        </p>
+      </div>
+      <div>
+        <h4>Maksuehdot</h4>
+        <p>
+          Maksuaika 14 päivää laskun päivämäärästä.<br>
+          Maksu vasta kun olette tyytyväisiä lopputulokseen.<br>
+          <strong>30 päivän tyytyväisyystakuu.</strong>
+        </p>
+      </div>
+    </div>
+
+    <div class="note">
+      <p>
+        <strong>Huom:</strong> Tämä lasku on esikatselulasku. Maksu suoritetaan vasta kun olette hyväksyneet
+        verkkosivuston ja olette tyytyväisiä lopputulokseen. Meillä on 30 päivän tyytyväisyystakuu —
+        jos ette ole tyytyväisiä, saatte rahanne takaisin. Ei piilokustannuksia, ei sidonnaisuuksia.
+      </p>
+    </div>
+  </div>
+
+  <div class="thanks">
+    <h3>Kiitos luottamuksestanne!</h3>
+    <p>Olemme innoissamme yhteistyöstä kanssanne.</p>
+    <div class="contact">
+      <a href="tel:+358466109064">+358 46 6109064</a>
+      <a href="mailto:yassinfennir@gmail.com">yassinfennir@gmail.com</a>
+      <a href="https://wa.me/358466109064">WhatsApp</a>
+      <a href="https://elfennir.com">https://elfennir.com</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
